@@ -21,5 +21,5 @@ from ogbuifyscrumy.urls import urlpatterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('okoro/', include(urlpatterns))
+    path('ogbuify/', include(urlpatterns))
 ]
