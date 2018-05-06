@@ -21,5 +21,6 @@ from ogbuifyscrumy.urls import urlpatterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('ogbuify/', include(urlpatterns))
+    path('ogbuify/', include(urlpatterns)),
+    path('accounts/', include('django.contrib.auth.urls'))
 ]

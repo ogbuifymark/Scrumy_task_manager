@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+<table style="width:100%">
+  <tr>
+     <th>Add User</th>
+     <th>User</th>
+     <th>Add task</th>
+    <th>Weekly Goals</th>
+    <th>Daily Goals</th>
+    <th>Verify</th>
+    <th>Done</th>
+  </tr>
+
+    <!--lab 13-->
+  {% if goals %}
+     {% for goal in goals %}
+  <tr>
+    <td><a href="{% url 'add_user' %}"> <button>click to add user</button></a></td>
+    <td>{{goal.user_id.user_name}}</td>
+    <td><a href="{% url 'add_task' %}"><button>click to add task</button></a></td>
+    <td>{{goal.user_id.status}}</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+{% endfor%}
+  {% endif%}
+</table></div>
+</body>
+</html>
